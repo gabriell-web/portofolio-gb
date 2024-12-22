@@ -22,6 +22,17 @@
     box-sizing: border-box; /*PARA FICAR NA MESMA BORDA DA CAIXA*/
 }
 
+h2.titulo {
+  font-family: var(--fonte-padrao);
+  color: white;
+  font-size: 38px;
+  text-align: center;
+}
+
+h2.titulo span{
+  font-family: var(--fonte-padrao);
+  color: #0583F2;
+}
 :root {
   /*CONFIGURAÇÕES GLOBAIS*/
   --cor0: #000000;
@@ -157,7 +168,7 @@ header .GB-contato button {
     animation: flutuar 2s ease-in-out infinite alternate; /* Aplica a animação */
     height: 500px;
   }
-  
+ 
   @keyframes flutuar {
     0% {
       top: 0; /* Posição inicial */
@@ -165,6 +176,47 @@ header .GB-contato button {
     100% {
       top: 30px; /* Move para 30px para baixo */
     }
+  }
+
+  section.especialidades {
+    padding: 40px 4%;
+
+  }
+
+  section.especialidades .flex {
+    gap: 60px;
+  }
+
+  .especialidades .especialidades-box {
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 45px;
+    transition: .5s;
+  }
+
+  .especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.441);
+
+  }
+
+  .especialidades-box i {
+    font-size: 70px;
+    color: #0583F2;
+
+  }
+
+  .especialidades .especialidades-box h3 {
+    font-family: var(--fonte-padrao);
+    font-size: 28px;
+    margin: 15px 0px;
+  }
+
+  .especialidades .especialidades-box p {
+    color: white;
+    font-family: var(--fonte-padrao);
   }
   
 
