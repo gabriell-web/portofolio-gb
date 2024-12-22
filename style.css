@@ -33,6 +33,11 @@ h2.titulo span{
   font-family: var(--fonte-padrao);
   color: #0583F2;
 }
+
+button:hover {
+    box-shadow: 0px 0px 8px var(--cor02);
+    transform: scale(1.05);
+  }
 :root {
   /*CONFIGURAÇÕES GLOBAIS*/
   --cor0: #000000;
@@ -125,6 +130,7 @@ header .GB-contato button {
 
  .GB-contato button:hover {
     box-shadow: 0px 0px 8px var(--cor02);
+    transform: scale(1.05);
   }
 
   .menu-desktop a:hover { 
@@ -136,6 +142,7 @@ header .GB-contato button {
   /*ESTILO DO TOPO DO SITE*/
   section.topo-do-site {
     padding: 40px 4%;
+    
   }
 
   section.topo-do-site .flex{
@@ -179,7 +186,7 @@ header .GB-contato button {
   }
 
   section.especialidades {
-    padding: 40px 4%;
+    padding: 80px 4%;
 
   }
 
@@ -219,11 +226,57 @@ header .GB-contato button {
     font-family: var(--fonte-padrao);
   }
   
+  /*ESTILO DO SOBRE*/
+
+  .sobre .img-sobre img {
+    width: 300px;
+    border-radius: 20px;
+  }
+  section.sobre{
+    padding: 80px 4%;
+  }
+
+  section.sobre .flex{
+    gap: 60px;
+    align-items: center;
+  }
+
+  .sobre .txt-sobre{
+    color: white;
+    
+  }
+
+  .sobre .txt-sobre h2 {
+    font-size: 40px;
+    font-family: var(--fonte-padrao);
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+
+  .sobre .txt-sobre h2 span{
+    color: #0583F2;
+    display: block;
+  }
+
+  .sobre .txt-sobre p {
+    font-family: var(--fonte-padrao);
+    color: white;
+    margin: 20px 0;
+    text-align: justify;
+  }
+
+  .sobre .txt-sobre .redes button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    color: var(--cor02);
+    background-color: #000000;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+  }
 
 
 
-
-
-
-  
-  
