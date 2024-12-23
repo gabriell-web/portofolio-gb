@@ -1,87 +1,96 @@
 @charset "UTF-8";
 
-
-
+/* Definição de fontes personalizadas */
 @font-face {
     font-family: 'personalizada';
     src: url('./fonte/DESIGNER.otf') format('opentype');
     font-weight: normal;
-} /*Arquivo Interno*/
+} /* Fonte personalizada */
 
 @font-face {
-  font-family: 'Regular';
-  src: url('./fonte/Poppins-Regular.ttf') format('opentype');
-  font-weight: normal;
-} /*Arquivo Interno*/
+    font-family: 'Regular';
+    src: url('./fonte/Poppins-Regular.ttf') format('opentype');
+    font-weight: normal;
+} /* Fonte padrão */
 
-
-/*ESTILO GERAL*/
-*{
+/* Reset e configuração inicial */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*PARA FICAR NA MESMA BORDA DA CAIXA*/
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões do elemento */
 }
 
-h2.titulo {
-  font-family: var(--fonte-padrao);
-  color: white;
-  font-size: 38px;
-  text-align: center;
-}
-
-h2.titulo span{
-  font-family: var(--fonte-padrao);
-  color: #0583F2;
-}
-
-button:hover {
-    box-shadow: 0px 0px 8px var(--cor02);
-    transform: scale(1.05);
-  }
+/* Variáveis globais */
 :root {
-  /*CONFIGURAÇÕES GLOBAIS*/
-  --cor0: #000000;
-  --cor01: #035AA6;
-  --cor02: #0583F2;
-  --cor03: #6DDAF2;
+    --cor0: #000000;
+    --cor01: #035AA6;
+    --cor02: #0583F2;
+    --cor03: #6DDAF2;
 
-  --fonte-padrao: 'Regular';
-  --fonte-destaque: 'personalizada';
+    --fonte-padrao: 'Regular';
+    --fonte-destaque: 'personalizada';
 }
 
-
+/* Estilo geral para o corpo */
 body {
     background-color: var(--cor0);
     height: 100vh;
 }
 
+/* Títulos */
+h2.titulo {
+    font-family: var(--fonte-padrao);
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    font-family: var(--fonte-padrao);
+    color: #0583F2;
+}
+
+/* Botões */
+button:hover {
+    box-shadow: 0px 0px 8px var(--cor02);
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+/* Estilo para botões em uma classe específica */
 .GB-contato button {
     background-color: var(--cor02);
     padding: 10px 30px;
-    font-size: 18;
+    font-size: 18px;
     font-weight: 600;
     border: 0;
     border-radius: 15px;
-    cursor: pointer; /*PARA O CURSOR VIRAR UM DEDINHO*/
-    transition: .2s; 
+    cursor: pointer;
+    transition: 0.2s;
 }
 
+.GB-contato button:hover {
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px var(--cor02);
+}
+
+/* Interface geral */
 .interface {
     max-width: 1280px;
     margin: 0 auto;
 }
 
+/* Flexbox para centralização e alinhamento */
 .flex {
     display: flex;
 }
 
-/*ESTILO DO CABEÇALHO */
+/* Estilo do cabeçalho */
 header {
     min-width: 300px;
     max-width: 1200px;
     padding: 40px 4%;
-    
-
 }
 
 header > .interface {
@@ -95,22 +104,24 @@ header img {
     height: 250px;
 }
 
+/* Links no cabeçalho */
 header a {
     color: rgb(98, 96, 96);
-    font-family:var(--fonte-padrao);
+    font-family: var(--fonte-padrao);
     text-decoration: none;
     display: inline-block;
-    transition: .2s;
+    transition: 0.2s;
 }
 
-.GB-contato button:hover{
+.menu-desktop a:hover {
     color: white;
-    transform: scale(1.05)
+    transform: scale(1.05);
+    transition: 0.2s;
 }
 
+/* Lista de navegação no cabeçalho */
 header nav ul {
     list-style-type: none;
-
 }
 
 header nav ul li {
@@ -118,154 +129,132 @@ header nav ul li {
     padding: 0 40px;
 }
 
-header .GB-contato button {
-    background-color: var(--cor02);
-    padding: 10px 30px;
-    font-size: 18;
-    font-weight: 600;
-    border: 0;
-    border-radius: 15px;
-    cursor: pointer; /*PARA O CURSOR VIRAR UM DEDINHO*/  
+/* Estilo da seção do topo do site */
+section.topo-do-site {
+    padding: 40px 4%;
 }
 
- .GB-contato button:hover {
-    box-shadow: 0px 0px 8px var(--cor02);
-    transform: scale(1.05);
-  }
-
-  .menu-desktop a:hover { 
-    color: white;
-    transform: scale(1.05);
-    transition: .2s;
-  }
-
-  /*ESTILO DO TOPO DO SITE*/
-  section.topo-do-site {
-    padding: 40px 4%;
-    
-  }
-
-  section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 90px;
-  }
+}
 
-  .topo-do-site h1 {
+.topo-do-site h1 {
     color: white;
     font-family: var(--fonte-padrao);
     font-size: 42px;
     line-height: 40px;
-  }
+}
 
-  .topo-do-site .texto-topo-site h1 span {
+.topo-do-site .texto-topo-site h1 span {
     color: var(--cor02);
     font-size: 84px;
-  }
+}
 
-  .topo-do-site .texto-topo-site p {
+.topo-do-site .texto-topo-site p {
     font-family: var(--fonte-padrao);
     font-size: 20px;
     color: white;
     margin: 40px 0px;
-  }
+}
 
-  .topo-do-site .img-topo-site img {
-    position: relative; /* Define que o elemento é posicionado relativamente a si mesmo */
-    animation: flutuar 2s ease-in-out infinite alternate; /* Aplica a animação */
+/* Imagem no topo do site com animação */
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
     height: 500px;
-  }
- 
-  @keyframes flutuar {
+}
+
+/* Keyframes para animação flutuar */
+@keyframes flutuar {
     0% {
-      top: 0; /* Posição inicial */
+        top: 0; /* Posição inicial */
     }
     100% {
-      top: 30px; /* Move para 30px para baixo */
+        top: 30px; /* Move 30px para baixo */
     }
-  }
+}
 
-  section.especialidades {
+/* Estilo da seção especialidades */
+section.especialidades {
     padding: 80px 4%;
+}
 
-  }
-
-  section.especialidades .flex {
+section.especialidades .flex {
     gap: 60px;
-  }
+}
 
-  .especialidades .especialidades-box {
+.especialidades .especialidades-box {
     color: white;
     padding: 40px;
     border-radius: 20px;
     border: 2px solid rgb(0, 0, 0);
     margin-top: 45px;
-    transition: .5s;
-  }
+    transition: 0.5s;
+}
 
-  .especialidades .especialidades-box:hover {
+.especialidades .especialidades-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 14px rgba(255, 255, 255, 0.441);
+}
 
-  }
-
-  .especialidades-box i {
+.especialidades-box i {
     font-size: 70px;
     color: #0583F2;
+}
 
-  }
-
-  .especialidades .especialidades-box h3 {
+.especialidades .especialidades-box h3 {
     font-family: var(--fonte-padrao);
     font-size: 28px;
     margin: 15px 0px;
-  }
+}
 
-  .especialidades .especialidades-box p {
+.especialidades .especialidades-box p {
     color: white;
     font-family: var(--fonte-padrao);
-  }
-  
-  /*ESTILO DO SOBRE*/
+}
 
-  .sobre .img-sobre img {
-    width: 300px;
-    border-radius: 20px;
-  }
-  section.sobre{
+/* Estilo da seção sobre */
+section.sobre {
     padding: 80px 4%;
-  }
+}
 
-  section.sobre .flex{
+section.sobre .flex {
     gap: 60px;
     align-items: center;
-  }
+}
 
-  .sobre .txt-sobre{
+.sobre .img-sobre img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+.sobre .txt-sobre {
     color: white;
-    
-  }
+}
 
-  .sobre .txt-sobre h2 {
+.sobre .txt-sobre h2 {
     font-size: 40px;
     font-family: var(--fonte-padrao);
     line-height: 40px;
     margin-bottom: 30px;
-  }
+}
 
-  .sobre .txt-sobre h2 span{
+.sobre .txt-sobre h2 span {
     color: #0583F2;
     display: block;
-  }
+}
 
-  .sobre .txt-sobre p {
+.sobre .txt-sobre p {
     font-family: var(--fonte-padrao);
     color: white;
     margin: 20px 0;
     text-align: justify;
-  }
+}
 
-  .sobre .txt-sobre .redes button {
+/* Botões das redes sociais na seção sobre */
+.sobre .txt-sobre .redes button {
     width: 60px;
     height: 60px;
     border-radius: 30px;
@@ -275,8 +264,5 @@ header .GB-contato button {
     font-size: 30px;
     cursor: pointer;
     margin: 0 5px;
-    transition: .2s;
-  }
-
-
-
+    transition: 0.2s;
+}
