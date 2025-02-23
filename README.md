@@ -1,2 +1,2 @@
 # portofolio-gb
- Criando meu primeiro portofólio usando HTML e CSS
+ Criando meu primeiro portofólio usando HTML e CSS e javascript
